@@ -1,0 +1,35 @@
+*{
+    outline: 1px dotted red;
+    margin: 0;
+    padding-top: 10px;
+    /* width: 840px; */
+    /* height: 500px; */
+}
+#main_title{
+    text-align: center;
+    /* height: 600px; */
+    width: auto;
+    /* padding-bottom: 30px; */
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 970px;
+    height: 140px;
+    background: radial-gradient(gray,#c4dee9);
+    background-image: linear-gradient(to bottom left, gray, #c4dee9);
+}
+#logo{
+    width: 100px;
+    height: 100px;
+}
+#tree{
+    width: 100px;
+    height: 100px;
+}
+.navbar{
+    background-color: gray;
+    height: 40px;
+    width: 970px;
+}
