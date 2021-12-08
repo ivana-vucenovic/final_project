@@ -5,3 +5,18 @@ import bcrypt
 
 def index(request):
     return render(request, 'main.html')
+
+def register(request):
+    pass
+
+def login(request):
+    pass
+
+def contact(request):
+    pass
+
+def aboutUs(request):
+    pass
+
+def requestQuote(request):
+    pass

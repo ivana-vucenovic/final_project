@@ -1,15 +1,11 @@
 *{
-    outline: 1px dotted red;
+    /* outline: 1px dotted red; */
     margin: 0;
-    padding-top: 10px;
-    /* width: 840px; */
-    /* height: 500px; */
+    padding-top: 0;
 }
 #main_title{
     text-align: center;
-    /* height: 600px; */
     width: auto;
-    /* padding-bottom: 30px; */
 }
 .main{
     display: flex;
@@ -21,10 +17,12 @@
     background-image: linear-gradient(to bottom left, gray, #c4dee9);
 }
 #logo{
+    outline: 5px solid gray;
     width: 100px;
     height: 100px;
 }
 #tree{
+    outline: 5px solid gray;
     width: 100px;
     height: 100px;
 }
@@ -32,4 +30,56 @@
     background-color: gray;
     height: 40px;
     width: 970px;
+}
+.navbar ul{
+    padding-top: 10px;
+    padding-left: 140px;
+    list-style: none;
+    
+}
+.navbar li{
+    display:inline;
+    
+    
+}
+.navbar a{
+    color: #c4dee9;
+    text-decoration: none;
+    font-size: 20px;
+    padding-right: 40px;
+
+}
+.info{
+    height: 270px;
+    width: 970px;
+    background: radial-gradient(black,rgb(63, 63, 63));
+    background-image: linear-gradient(to bottom left, black,rgb(63, 63, 63));
+
+    /* background-color: black; */
+}
+.info h2, h3, h4, h5{
+    color: #c4dee9;
+}
+.info h2{
+    padding-top: 35px;
+    padding-left: 110px;
+}
+.info h3{
+    padding-top: 25px;
+    padding-left: 120px;
+}
+.info h4{
+    padding-top: 15px;
+    padding-left: 210px;
+}
+.info h5{
+    padding-top: 10px;
+    padding-left: 360px;
+}
+footer{
+    width: 970px;
+    height: 15px;
+    background-color: gray;
+    color: #c4dee9;
+    font-size: 10px;
 }
