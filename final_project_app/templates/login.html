@@ -7,9 +7,22 @@
     <title>Log in</title>
 </head>
 <body>
-    <div class='login'>
+    <div id="log">
         <h1>Welcome to Dial-a-Caregiver</h1>
-    </div>
+        <form action = "/login" method ="POST">
+            {% csrf_token %}
+
+            <div class="login">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" >
+            </div>
+            <div class="login">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" >
+            </div>
+            <button class="btn btn-primary">Log In</button>
+        </form>
+    </div>   
     
 </body>
 </html>

@@ -1,0 +1,11 @@
+#registration{
+    padding-top: 30px;
+    text-align: center;
+    width: auto;
+}
+.reg{
+    width: 970px;
+    height: 500px;
+    background: radial-gradient(gray,#c4dee9);
+    background-image: linear-gradient(to bottom left, gray, #c4dee9);
+}
