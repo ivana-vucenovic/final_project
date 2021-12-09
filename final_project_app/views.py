@@ -7,7 +7,7 @@ def index(request):
     return render(request, 'main.html')
 
 def register(request):
-    pass
+    return render(request, 'register.html')
 
 def login(request):
     pass
