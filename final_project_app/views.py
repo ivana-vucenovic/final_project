@@ -11,6 +11,9 @@ def register(request):
 
 def login(request):
     return render(request, 'login.html')
+
+def send(request):
+    return render(request, 'send.html')
     
 def contact(request):
     pass

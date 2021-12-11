@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 970px;
+    height: 140px;
+}
+#logo{
+    outline: 5px solid gray;
+    width: 100px;
+    height: 100px;
+}
+#tree{
+    outline: 5px solid gray;
+    width: 100px;
+    height: 100px;
+}
