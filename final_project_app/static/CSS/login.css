@@ -3,18 +3,14 @@
     margin: 0;
     padding-top: 0;
 }
-.reg{
-    width: 970px;
-    height: 500px;
-    background: radial-gradient(gray,#c4dee9);
-    background-image: linear-gradient(to bottom left, gray, #c4dee9);
-}
 .head{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 970px;
     height: 140px;
+
+
 }
 #logo{
     outline: 5px solid gray;
@@ -26,19 +22,28 @@
     width: 100px;
     height: 100px;
 }
-#reg{
+#log{
+    width: 970px;
+    height: 500px;
+    background: radial-gradient(gray,#c4dee9);
+    background-image: linear-gradient(to bottom left, gray, #c4dee9);
+}
+.log{
+    /* width: 220px; */
+    /* margin: 30px; */
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding-left: 360px;
     padding-top: 40px;
+}
+.login{
+    
+    padding: 20px;
+    width: 250px;
 
 }
-.register{
-    padding: 10px;
-    width: 450px;
-}
-.btn{
+.btn {
     background-color: gray;
     font-size: medium;
     padding: 5px;
@@ -47,5 +52,5 @@
 .btn a{
     color: #c4dee9;
     text-decoration: none;
-
 }
+

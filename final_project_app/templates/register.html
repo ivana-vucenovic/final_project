@@ -10,7 +10,11 @@
 </head>
 <body>
     <div class='reg'>
-        <h1 id="registration">Registration</h1>
+        <header class="head">
+            <img id='logo' src="{% static 'CSS/images/DialaCaregiver Logo - Original - 5000x5000.png' %}" />
+            <h1 id="registration">Registration</h1>
+            <img id='tree' src="{% static 'CSS/images/tree_on_the_beach.png' %}" />
+        </header>
         {% if messages %}
         <ul>
             {% for message in messages %}
@@ -18,7 +22,7 @@
             {% endfor %}
         </ul>
         {% endif %}
-        <form action = "/register" method ="POST">
+        <form id = "reg" action = "/register" method ="POST">
             {% csrf_token %}
 
             <div class="register">
@@ -29,27 +33,6 @@
                 <label for="last_name">Last Name</label>
                 <input type="text" name="last_name" id="last_name" >
             </div>
-            <!-- <div >
-                <p>Enter your telephone number: </p>
-                <span class="areaDiv">
-                    <input id="areaNo" name="areaNo" type="tel" required
-                        placeholder="Area code" pattern="[0-9]{3}"
-                        aria-label="Area code">
-                <span class="validity"></span>
-                </span>
-                <span class="number1Div">
-                    <input id="number1" name="number1" type="tel" required
-                        placeholder="First part" pattern="[0-9]{3}"
-                        aria-label="First part of number">
-                    <span class="validity"></span>
-                </span>
-                <span class="number2Div">
-                    <input id="number2" name="number2" type="tel" required
-                        placeholder="Second part" pattern="[0-9]{4}"
-                        aria-label="Second part of number">
-                <span class="validity"></span>
-                </span>
-            </div> -->
             <div class="register">
                 <label for="telephone">Telephone Number</label>
                 <input id="telNo" name="telNo" type="tel"placeholder="123-456-7890">
@@ -66,7 +49,8 @@
                 <label for="pw_confirm">Confirm Password</label>
                 <input type="password" name="pw_confirm" id="pw_confirm" >
             </div>
-            <button class="btn btn-primary">Register</button>
+            <button class="btn btn-warning"><a href="/login">Register</a></button>
+            <button class="btn btn-primary"><a href="/home">Home</a></button>
         </form>
     </div>
     
