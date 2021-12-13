@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: space-evenly;
     width: 970px;
-    height: 140px;
+    height: 150px;
     background: radial-gradient(gray,#c4dee9);
     background-image: linear-gradient(to bottom left, gray, #c4dee9);
 }
@@ -24,7 +24,7 @@
 #tree{
     outline: 5px solid gray;
     width: 100px;
-    height: 100px;
+    height:auto
 }
 .navbar{
     background-color: gray;

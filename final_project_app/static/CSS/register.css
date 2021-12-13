@@ -3,34 +3,35 @@
     margin: 0;
     padding-top: 0;
 }
-.reg{
-    width: 970px;
-    height: 500px;
-    background: radial-gradient(gray,#c4dee9);
-    background-image: linear-gradient(to bottom left, gray, #c4dee9);
+.reg2{
+    width: 960px;
+    height: auto;
+    position: absolute;
 }
 .head{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding-top: 30px;
     width: 970px;
     height: 140px;
+    color: white;
 }
 #logo{
     outline: 5px solid gray;
     width: 100px;
     height: 100px;
 }
-#tree{
+#x-mas{
     outline: 5px solid gray;
     width: 100px;
-    height: 100px;
+    height: auto;
 }
 #reg{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 360px;
+    padding-left: 405px;
     padding-top: 40px;
 
 }
@@ -40,12 +41,13 @@
 }
 .btn{
     background-color: gray;
+    box-shadow: 5px 8px white;
     font-size: medium;
     padding: 5px;
     margin: 5px;
 }
 .btn a{
-    color: #c4dee9;
+    color: white;
     text-decoration: none;
 
 }
