@@ -7,15 +7,54 @@
     <title>Send</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'CSS/send.css' %}">
+    <style type="text/CSS">
+        .reg1 {
+            background-image: url("{% static 'images/waterfall.png'%}");
+            background-size: cover;
+            position: relative;
+            /* background-size: contain; */
+            background-position: center top;
+            width: 100vw;
+            height: 100vh;
+
+        }
+    </style>
+
 
 </head>
 <body>
-    <div class="send">
-        <header class="head">
-            <img id='logo' src="{% static 'images/DialaCaregiver Logo - Original - 5000x5000.png' %}" />
-            <h1>Send a new SMS</h1>
-            <img id='beach_stones' src="{% static 'images/beach_stones.png' %}" />
-        </header>
+    <div class="reg1">
+        <div class="reg2">
+            <div class="send">
+                <header class="head">
+                    <img id='logo' src="{% static 'images/DialaCaregiver Logo - Original - 5000x5000.png' %}" />
+                    <h1>Send a new SMS</h1>
+                    <img id='waterfall' src="{% static 'images/waterfall.png' %}" />
+                </header>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="/nurses">List of nurses</a></li>
+                    <li><a href="/add_a_nurse">Add a Nurse to the list</a></li>
+                    <li><a href="/psws">PSWs</a></li>
+                    <li><a href="/add_a_psw">Add a PSW to the list</a></li>
+                    <li><a href="/home">Home</a></li>
+                </ul>
+            </div>
+            <form class="form">
+                <div class="send">
+                    <select name="department">
+                        <option value = "false">Select department</option>
+                        <option value = "nurse">Nurse</option>
+                        <option value = "psw">PSW</option>
+                    </select>
+                </div>
+                <div class="send">
+                    <textarea name = "message" placeholder="SMS Message"></textarea>
+                </div>
+                <button class="btn btn-primary"><a href="/send">Send</a></button>
+            </form>
+        </div>
     </div>
     
 </body>

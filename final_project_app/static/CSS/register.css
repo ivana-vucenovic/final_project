@@ -16,6 +16,10 @@
     width: 970px;
     height: 140px;
     color: white;
+    font-family: fantasy;
+}
+h1{
+    font-family: fantasy;
 }
 #logo{
     outline: 5px solid gray;
@@ -48,6 +52,7 @@
 }
 .btn a{
     color: white;
+    font-family: fantasy;
     text-decoration: none;
 
 }

@@ -16,6 +16,10 @@
     background: radial-gradient(gray,#c4dee9);
     background-image: linear-gradient(to bottom left, gray, #c4dee9);
 }
+h1{
+    font-family: fantasy;
+
+}
 #logo{
     outline: 5px solid gray;
     width: 100px;
@@ -33,7 +37,7 @@
 }
 .navbar ul{
     padding-top: 10px;
-    padding-left: 140px;
+    padding-left: 100px;
     list-style: none;
     
 }
@@ -44,6 +48,7 @@
 }
 .navbar a{
     color: #c4dee9;
+    font-family: fantasy;
     text-decoration: none;
     font-size: 20px;
     padding-right: 40px;
@@ -59,6 +64,8 @@
 }
 .info h2, h3, h4, h5{
     color: #c4dee9;
+    font-family: fantasy;
+
 }
 .info h2{
     padding-top: 35px;
@@ -81,5 +88,6 @@ footer{
     height: 15px;
     background-color: gray;
     color: #c4dee9;
+    font-family: fantasy;
     font-size: 10px;
 }
