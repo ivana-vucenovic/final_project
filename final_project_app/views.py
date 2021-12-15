@@ -23,3 +23,5 @@ def aboutUs(request):
 
 def requestQuote(request):
     pass
+def nurses(request):
+    return render(request, 'nurses.html')

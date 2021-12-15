@@ -1,0 +1,33 @@
+*{
+    /* outline: 1px dotted red; */
+    margin: 0;
+    padding-top: 0;
+}
+.reg2{
+    width: 960px;
+    height: auto;
+    position: absolute;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    width: 970px;
+    height: 140px;
+    color: white;
+    font-family: fantasy;
+}
+h1{
+    font-family: fantasy;
+}
+#logo{
+    outline: 5px solid gray;
+    width: 100px;
+    height: 100px;
+}
+#grass{
+    outline: 5px solid gray;
+    width: 100px;
+    height: auto;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurses list</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/nurses.css' %}">
+    <style type="text/CSS">
+        .reg1 {
+            background-image: url("{% static 'images/grass.png'%}");
+            background-size: cover;
+            /* background-attachment: fixed; */
+            position: relative;
+            /* background-size: contain; */
+            background-position: center center;
+            /* background-repeat: no-repeat; */
+            width: 140vw;
+            height: 100vh;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="reg1">
+        <div class="reg2">
+            <header class="head">
+                <img id='logo' src="{% static 'images/DialaCaregiver Logo - Original - 5000x5000.png' %}" />
+                <h1 id="nurses">Nurses</h1>
+                <img id='grass' src="{% static 'images/grass.png' %}" />
+            </header>
+            <table id = 'top'>
+                <thead>
+                    <tr>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Telephone number</th>
+                        <th>Email</th>
+                        <th>Send SMS</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for wish in wishes %}
+                    {% if wish.granted == False %}
+                    <tr>
+                        <td>{{wish.item}}</td>
+                        <td>{{wish.created_at}}</td>
+                        <td> <a href ='/wish/{{wish.id}}/delete'>Remove</a> | <a href ='/wish/{{wish.id}}/edit'>Edit</a> |<a href ='/wish/{{wish.id}}/granted'>Granted</a></td>
+                    </tr>
+                    {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+    
+
+        </div>
+    </div>
+    
+</body>
+</html>
