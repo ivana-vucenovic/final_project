@@ -1,10 +1,10 @@
 *{
-    /* outline: 1px dotted red; */
+    outline: 1px dotted red;
     margin: 0;
     padding-top: 0;
 }
 .reg2{
-    width: 960px;
+    width: 920px;
     height: auto;
     position: absolute;
 }
@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: space-evenly;
     padding-top: 30px;
-    width: 970px;
+    width: 920px;
     height: 140px;
     color: white;
     font-family: fantasy;
@@ -30,4 +30,22 @@ h1{
     outline: 5px solid gray;
     width: 100px;
     height: auto;
+}
+#top{
+    color: white;
+    font-size: x-large;
+    font-family: fantasy;
+    padding-top: 40px;
+    /* display: flex;
+    justify-content: space-evenly; */
+
+}
+.thead{
+    /* display: flex; */
+    padding-right: 18px;
+    padding-left: 18px;
+
+    /* justify-content: space-evenly; */
+
+
 }

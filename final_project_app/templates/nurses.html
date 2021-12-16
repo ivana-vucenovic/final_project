@@ -16,7 +16,7 @@
             /* background-size: contain; */
             background-position: center center;
             /* background-repeat: no-repeat; */
-            width: 140vw;
+            width: 100vw;
             height: 100vh;
 
         }
@@ -34,15 +34,15 @@
             <table id = 'top'>
                 <thead>
                     <tr>
-                        <th>First name</th>
-                        <th>Last name</th>
-                        <th>Telephone number</th>
-                        <th>Email</th>
-                        <th>Send SMS</th>
-                        <th>Remove</th>
+                        <th class="thead">First name</th>
+                        <th class="thead">Last name</th>
+                        <th class="thead">Telephone number</th>
+                        <th class="thead">Email</th>
+                        <th class="thead">Send SMS</th>
+                        <th class="thead">Remove</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody">
                     {% for wish in wishes %}
                     {% if wish.granted == False %}
                     <tr>
