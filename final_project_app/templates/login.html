@@ -32,7 +32,7 @@
                 <h1>Welcome to Dial-a-Caregiver</h1>
                 <img id='tree' src="{% static 'images/tree_on_the_beach.png' %}" />
             </header>
-            <form class = "log" action = "/login" method ="POST">
+            <form class = "log" action = "/login_user" method ="POST">
                 {% csrf_token %}
     
                 <div class="login">
@@ -44,6 +44,8 @@
                     <input type="password" name="password" id="password" placeholder="Password">
                 </div>
                 <button class="btn btn-primary"><a href="/send">Log in</a></button>
+                <button class="btn btn-primary"><a href="/home">Home</a></button>
+
             </form>
             
         

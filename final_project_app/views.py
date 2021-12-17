@@ -6,10 +6,10 @@ import bcrypt
 def index(request):
     return render(request, 'main.html')
 
-# def register(request):
-#     return render(request, 'register.html')
-
 def register(request):
+    return render(request, 'register.html')
+
+def register_user(request):
     if request.method == 'POST':
         errors=User.objects.registration_validator(request.POST)
         if len(errors) > 0:
@@ -24,12 +24,24 @@ def register(request):
             password=pw_hash,
         )
         request.session['user_id'] = new_user.id
-        return redirect('/tables')
-    return redirect('/')
+        return redirect('/send')
+    return redirect('/register')
 
 
 def login(request):
     return render(request, 'login.html')
+
+def login_user(request):
+    if request.method == 'POST':
+        errors = User.objects.login_validator(request.POST)
+        if len(errors) > 0:
+            for key,value in errors.items():
+                messages.error(request, value)
+            return redirect('/')
+        this_user = User.objects.filter(email=request.POST['email'])
+        request.session['user_id'] = this_user[0].id
+        return redirect('/tables')
+    return redirect('/')
 
 def send(request):
     return render(request, 'send.html')

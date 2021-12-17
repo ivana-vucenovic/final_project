@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'phone_field',
     'final_project_app',
     'django.contrib.admin',
     'django.contrib.auth',

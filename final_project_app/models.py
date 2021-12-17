@@ -1,5 +1,4 @@
 from django.db import models
-from phone_field.modelfields import PhoneField
 import re
 import bcrypt
 
@@ -76,7 +75,6 @@ class User(models.Model):
     first_name=models.CharField(max_length=45)
     last_name=models.CharField(max_length=45)
     email=models.EmailField(max_length=70,blank=True,unique=True)
-    phone = PhoneField(null=False, blank=False, unique=True)
     password=models.CharField(max_length=12)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
