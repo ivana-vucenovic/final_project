@@ -43,14 +43,18 @@
                     </tr>
                 </thead>
                 <tbody id="tbody">
-                    {% for wish in wishes %}
-                    {% if wish.granted == False %}
+                    {% for nurse in nurses %}
+                    <!-- {% if wish.granted == False %} -->
                     <tr>
-                        <td>{{wish.item}}</td>
-                        <td>{{wish.created_at}}</td>
-                        <td> <a href ='/wish/{{wish.id}}/delete'>Remove</a> | <a href ='/wish/{{wish.id}}/edit'>Edit</a> |<a href ='/wish/{{wish.id}}/granted'>Granted</a></td>
+                        <td>{{nurse.firstName}}</td>
+                        <td>{{nurse.lastName}}</td>
+                        <td>{{nurse.tel}}</td>
+                        <td>{{nurse.eMail}}</td>
+                        <td>{{nurse.check}}<input type="checkbox" id="checkBox" name="checkBox" value="Send"></td>
+                        <!-- <td>{{wish.created_at}}</td> -->
+                        <td> <a href ='/nurse/{{nurse.id}}/delete'>Remove</a></td>
                     </tr>
-                    {% endif %}
+                    <!-- {% endif %} -->
                     {% endfor %}
                 </tbody>
             </table>

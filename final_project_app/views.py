@@ -56,3 +56,6 @@ def requestQuote(request):
     pass
 def nurses(request):
     return render(request, 'nurses.html')
+
+def add_a_nurse(request):
+    return render(request, 'add_a_nurse.html')

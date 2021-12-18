@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a nurse</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'CSS/add_a_nurse.css' %}">
+    <style type="text/CSS">
+        .reg1 {
+            background-image: url("{% static 'images/beach_stones.png'%}");
+            background-size: cover;
+            position: relative;
+            background-position: center center;
+            width: 140vw;
+            height: 100vh;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="reg1">
+        <div class="reg2">
+            <header class="head">
+                <img id='logo' src="{% static 'images/DialaCaregiver Logo - Original - 5000x5000.png' %}" />
+                <h1 id="registration">Add a Nurse</h1>
+                <img id='beach_stone' src="{% static 'images/beach_stones.png' %}" />
+            </header>
+            <form action = "/create" method ="POST">
+                {% csrf_token %}
+        
+                <div class="edit_nurse">
+                    <input id="firstName" name="firstName" type="firstName"placeholder="First Name">
+                    <input id="lastName" name="lastName" type="lastName"placeholder="Last Name">
+                    <input id="telNo" name="tel" type="tel"placeholder=" Tel. 123-456-7890">
+                    <input type="email" name="eMail" id="email" placeholder="Email">
+                    <input type="checkbox" id="checkBox" name="checkBox" value="Send">
+                    <!-- <label for="item">I wish for</label> -->
+                    <!-- <input type="text" name="item" id="item" value=""> -->
+                </div>
+                <!-- <div class="edit_wish"> -->
+                    <!-- <label for="description">Description</label> -->
+                    <!-- <input type="text" name="description" id="description" value=""> -->
+                <!-- </div>  -->
+                <a href="/tables"><button class="btn btn-primary">Submit</button></a>
+            </form>
+            <a href ='/cancel'><button class="btn btn-primary">Cancel</button></a>     
+        
+        </div>
+    </div>
+    
+</body>
+</html>

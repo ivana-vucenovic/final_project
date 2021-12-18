@@ -10,6 +10,7 @@ urlpatterns = [
     path('login_user', views.login_user),
     path('send', views.send),
     path('nurses', views.nurses),
+    path('add_a_nurse', views.add_a_nurse),
     path('contact', views.contact),
     path('aboutUs', views.aboutUs),
     path('requestQuote', views.requestQuote),
