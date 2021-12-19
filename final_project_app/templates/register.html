@@ -11,14 +11,10 @@
         .reg1 {
             background-image: url("{% static 'images/beach_stones.png'%}");
             background-size: cover;
-            /* background-attachment: fixed; */
             position: relative;
-            /* background-size: contain; */
             background-position: center center;
-            /* background-repeat: no-repeat; */
             width: 140vw;
             height: 100vh;
-
         }
     </style>
 </head>
@@ -41,27 +37,18 @@
                 {% csrf_token %}
 
                 <div class="register">
-                    <!-- <label for="first_name">First Name</label> -->
                     <input type="text" name="first_name" id="first_name" placeholder="Organization name">
                 </div>
-                <!-- <div class="register">
-                    <label for="last_name">Last Name</label>
-                    <input type="text" name="last_name" id="last_name" >
-                </div> -->
                 <div class="register">
-                    <!-- <label for="telephone">Telephone Number</label> -->
                     <input id="telNo" name="telNo" type="tel"placeholder=" Tel. 123-456-7890">
                 </div>
                 <div class="register">
-                    <!-- <label for="email">Email</label> -->
                     <input type="email" name="email" id="email" placeholder="Email">
                 </div>
                 <div class="register">
-                    <!-- <label for="password">Password</label> -->
                     <input type="password" name="password" id="password" placeholder="Password">
                 </div>
                 <div class="register">
-                    <!-- <label for="pw_confirm">Confirm Password</label> -->
                     <input type="password" name="pw_confirm" id="pw_confirm" placeholder="Confirm Password">
                 </div>
                 <button class="btn btn-warning"><a href="/login">Register</a></button>

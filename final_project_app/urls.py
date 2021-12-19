@@ -11,6 +11,7 @@ urlpatterns = [
     path('send', views.send),
     path('nurses', views.nurses),
     path('add_a_nurse', views.add_a_nurse),
+    path('nurse/<int:nurse_id>/delete', views.delete),
     path('contact', views.contact),
     path('aboutUs', views.aboutUs),
     path('requestQuote', views.requestQuote),

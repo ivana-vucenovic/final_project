@@ -24,7 +24,7 @@ def register_user(request):
             password=pw_hash,
         )
         request.session['user_id'] = new_user.id
-        return redirect('/send')
+        return redirect('/login')
     return redirect('/register')
 
 
@@ -40,7 +40,7 @@ def login_user(request):
             return redirect('/')
         this_user = User.objects.filter(email=request.POST['email'])
         request.session['user_id'] = this_user[0].id
-        return redirect('/tables')
+        return redirect('/send')
     return redirect('/')
 
 def send(request):
@@ -56,6 +56,11 @@ def requestQuote(request):
     pass
 def nurses(request):
     return render(request, 'nurses.html')
+
+def delete(request, nurse_id):
+    to_delete = Nurse.objects.get(id=nurse_id)
+    to_delete.delete()
+    return redirect('/nurses')
 
 def add_a_nurse(request):
     return render(request, 'add_a_nurse.html')

@@ -45,10 +45,6 @@ class NurseManager(models.Manager):
         current_users = User.objects.filter(email=postData['email'])
         if len(current_users) > 0:
             errors ['email'] = "That email is already in use"
-        if len(postData['password']) < 8:
-            errors ['password'] = "Password should be at least 8 characters long"
-        if postData['password'] != postData['pw_confirm']:
-            errors['pw_confirm'] = "Password and PW_Confirm did not match!"
         return errors
 
 class PSWManager(models.Manager):
@@ -64,10 +60,6 @@ class PSWManager(models.Manager):
         current_users = User.objects.filter(email=postData['email'])
         if len(current_users) > 0:
             errors ['email'] = "That email is already in use"
-        if len(postData['password']) < 8:
-            errors ['password'] = "Password should be at least 8 characters long"
-        if postData['password'] != postData['pw_confirm']:
-            errors['pw_confirm'] = "Password and PW_Confirm did not match!"
         return errors
 
 
@@ -75,6 +67,7 @@ class User(models.Model):
     first_name=models.CharField(max_length=45)
     last_name=models.CharField(max_length=45)
     email=models.EmailField(max_length=70,blank=True,unique=True)
+    phone_number = models.CharField(max_length=255, null=True)
     password=models.CharField(max_length=12)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
@@ -84,7 +77,7 @@ class Nurse(models.Model):
     first_name=models.CharField(max_length=45)
     last_name=models.CharField(max_length=45)
     email=models.EmailField(max_length=70,blank=True,unique=True)
-    password=models.CharField(max_length=12)
+    this_nurse = models.ForeignKey(User, related_name='nurses', on_delete=models.CASCADE)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
     objects=NurseManager()
@@ -93,7 +86,7 @@ class PSW(models.Model):
     first_name=models.CharField(max_length=45)
     last_name=models.CharField(max_length=45)
     email=models.EmailField(max_length=70,blank=True,unique=True)
-    password=models.CharField(max_length=12)
+    this_PSW = models.ForeignKey(User, related_name='psws', on_delete=models.CASCADE)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
     objects=PSWManager()
