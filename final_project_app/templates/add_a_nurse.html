@@ -28,19 +28,26 @@
                 <h1 id="registration">Add a Nurse</h1>
                 <img id='beach_stone' src="{% static 'images/beach_stones.png' %}" />
             </header>
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{message}}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
             <form action = "/create" method ="POST">
                 {% csrf_token %}
         
                 <div class="edit_nurse">
-                    <input id="firstName" name="firstName" type="firstName"placeholder="First Name">
-                    <input id="lastName" name="lastName" type="lastName"placeholder="Last Name">
+                    <input id="firstName" name="first_name" type="firstName"placeholder="First Name">
+                    <input id="lastName" name="last_name" type="lastName"placeholder="Last Name">
                     <input id="telNo" name="tel" type="tel"placeholder=" Tel. 123-456-7890">
-                    <input type="email" name="eMail" id="email" placeholder="Email">
-                    <input type="checkbox" id="checkBox" name="checkBox" value="Send">
+                    <input type="email" name="email" id="email" placeholder="Email">
                 </div>
-                <a href="/tables"><button class="btn btn-primary">Submit</button></a>
+                <button class="btn btn-primary">Submit</button>
             </form>
-            <a href ='/cancel'><button class="btn btn-primary">Cancel</button></a>     
+            <a href ='/home'><button class="btn btn-primary">Cancel</button></a>     
         </div>
     </div>
 </body>

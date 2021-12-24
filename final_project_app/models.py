@@ -8,8 +8,6 @@ class UserManager(models.Manager):
         errors = {}
         if len(postData['first_name']) < 2:
             errors ['first_name'] = "First Name should be at least 2 characters"
-        if len(postData['last_name']) < 2:
-            errors ['last_name'] = "Last Name should be at least 2 characters"
         if not EMAIL_REGEX.match(postData['email']):           
             errors['email'] = "Invalid email address!"
         current_users = User.objects.filter(email=postData['email'])
@@ -33,7 +31,7 @@ class UserManager(models.Manager):
         return errors
 
 class NurseManager(models.Manager):
-    def registration_validator(self, postData):
+    def nurse_validator(self, postData):
         EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
         errors = {}
         if len(postData['first_name']) < 2:
@@ -48,7 +46,7 @@ class NurseManager(models.Manager):
         return errors
 
 class PSWManager(models.Manager):
-    def registration_validator(self, postData):
+    def psw_validator(self, postData):
         EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
         errors = {}
         if len(postData['first_name']) < 2:
@@ -65,7 +63,6 @@ class PSWManager(models.Manager):
 
 class User(models.Model):
     first_name=models.CharField(max_length=45)
-    last_name=models.CharField(max_length=45)
     email=models.EmailField(max_length=70,blank=True,unique=True)
     phone_number = models.CharField(max_length=255, null=True)
     password=models.CharField(max_length=12)
@@ -76,8 +73,9 @@ class User(models.Model):
 class Nurse(models.Model):
     first_name=models.CharField(max_length=45)
     last_name=models.CharField(max_length=45)
+    tel= models.CharField(max_length=255, null=True)
     email=models.EmailField(max_length=70,blank=True,unique=True)
-    this_nurse = models.ForeignKey(User, related_name='nurses', on_delete=models.CASCADE)
+    this_nurse = models.ForeignKey(User, related_name='nurses', on_delete=models.CASCADE, null=True, blank=True)
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
     objects=NurseManager()

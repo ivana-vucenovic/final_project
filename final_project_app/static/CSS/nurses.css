@@ -1,5 +1,4 @@
 *{
-    outline: 1px dotted red;
     margin: 0;
     padding-top: 0;
 }
@@ -13,13 +12,17 @@
     align-items: center;
     justify-content: space-evenly;
     padding-top: 30px;
-    width: 920px;
+    width: 960px;
     height: 140px;
     color: white;
     font-family: fantasy;
 }
 h1{
     font-family: fantasy;
+    background-color: gray;
+    padding: 10px;
+    box-shadow: 5px 7px white, 10px 14px gray;
+
 }
 #logo{
     outline: 5px solid gray;
@@ -32,20 +35,20 @@ h1{
     height: auto;
 }
 #top{
+    width: 960px;
+    margin-top: 30px;
     color: white;
-    font-size: x-large;
+    font-size: large;
     font-family: fantasy;
-    padding-top: 40px;
-    /* display: flex;
-    justify-content: space-evenly; */
+    background-color: gray;
 
 }
 .thead{
-    /* display: flex; */
     padding-right: 18px;
     padding-left: 18px;
-
-    /* justify-content: space-evenly; */
-
+}
+#tbody tr td{
+    padding-right: 18px;
+    padding-left: 18px;
 
 }

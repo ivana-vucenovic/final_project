@@ -11,11 +11,8 @@
         .reg1 {
             background-image: url("{% static 'images/grass.png'%}");
             background-size: cover;
-            /* background-attachment: fixed; */
             position: relative;
-            /* background-size: contain; */
             background-position: center center;
-            /* background-repeat: no-repeat; */
             width: 100vw;
             height: 100vh;
 
@@ -38,30 +35,22 @@
                         <th class="thead">Last name</th>
                         <th class="thead">Telephone number</th>
                         <th class="thead">Email</th>
-                        <th class="thead">Send SMS</th>
                         <th class="thead">Remove</th>
                     </tr>
                 </thead>
                 <tbody id="tbody">
                     {% for nurse in nurses %}
-                    <!-- {% if wish.granted == False %} -->
                     <tr>
-                        <td>{{nurse.firstName}}</td>
-                        <td>{{nurse.lastName}}</td>
+                        <td>{{nurse.first_name}}</td>
+                        <td>{{nurse.last_name}}</td>
                         <td>{{nurse.tel}}</td>
-                        <td>{{nurse.eMail}}</td>
-                        <td>{{nurse.check}}<input type="checkbox" id="checkBox" name="checkBox" value="Send"></td>
-                        <!-- <td>{{wish.created_at}}</td> -->
+                        <td>{{nurse.email}}</td>
                         <td> <a href ='/nurse/{{nurse.id}}/delete'>Remove</a></td>
                     </tr>
-                    <!-- {% endif %} -->
                     {% endfor %}
                 </tbody>
             </table>
-    
-
         </div>
     </div>
-    
 </body>
 </html>
